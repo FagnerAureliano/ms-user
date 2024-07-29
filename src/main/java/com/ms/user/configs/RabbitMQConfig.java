@@ -9,11 +9,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @Configuration
 public class RabbitMQConfig {
 
-       @Bean
+    @Bean
     public Jackson2JsonMessageConverter messageConverter() {
         ObjectMapper mapper = new ObjectMapper();
         return new Jackson2JsonMessageConverter(mapper);
     }
-
-
 }
